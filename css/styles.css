@@ -1,0 +1,224 @@
+@font-face {
+	font-family: "BebasNeue Bold";
+	src: url("../fonts/BebasNeue Bold.ttf");
+}
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+::-webkit-input-placeholder {color:#888887;}
+::-moz-placeholder          {color:#888887;}/* Firefox 19+ */
+:-moz-placeholder           {color:#888887;}/* Firefox 18- */
+:-ms-input-placeholder      {color:#888887;}
+
+body {
+	margin: 0;
+}
+
+form, fieldset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+img {
+	border: 0;
+}
+
+.contact-form h1 {
+	font: 42px 'BebasNeue Bold';
+	text-align: center;
+	margin-bottom: 22px;
+
+}
+
+.form {
+	height: 100vh;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+	position: relative;
+}
+
+.form:after {
+	position: absolute;
+	background: rgba(218, 211, 198, 0.5);
+	content: '';
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.contact-form {
+	position: absolute;
+	width: 446px;
+	max-width: 70%;
+	padding: 20px 40px 40px;
+	background: #fff;
+	border-radius: 3px;
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%);
+	margin-left: -223px;
+}
+
+.contact-form input[type=text],
+.contact-form input[type=email],
+.contact-form select,
+.contact-form textarea {
+	display: block;
+	width: 366px;
+	background: #f9f6f0;
+	padding: 13px 20px;
+	margin-bottom: 20px;
+	border: 0;
+	color: #000;
+	font-size: 16px;
+	font-style: italic;
+	line-height: 21px; 
+	border-radius: 3px;
+}
+
+.contact-form select {
+	margin-bottom: 30px;
+}
+
+.contact-form textarea {
+	padding: 14px 19px;
+	height: 150px;
+	resize: none;
+	margin-bottom: 20px; 
+}
+
+.contact-form input[type=submit] {
+	display: block;
+	width: 230px;
+	text-transform: uppercase;
+	padding: 0;
+	color: #fff;
+	line-height: 52px;
+	border-radius: 3px;
+	background: #eca22e;
+	cursor: pointer;
+	font-size: 18px;
+	border: 0;
+	margin: 0 auto;
+}
+
+.contact-form input[type=submit]:hover {
+	opacity: 0.7;
+}
+
+.fake-check {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	border: 3px solid #eeebe6;
+	border-radius: 3px;
+	margin: 0 12px 8px 0;
+	position: relative;
+	vertical-align: middle;
+}
+
+.fake-check:after {
+	content: '';
+	position: absolute;
+	width: 12px;
+	height: 6px;
+	border: solid #eca22e;
+	border-width: 3px 3px 0 0;
+	bottom: 7px;
+	left: 3px;
+	transform: rotate(135deg);
+	opacity: 0;
+}
+
+.check-list,
+.radio-list {
+	padding: 0;
+	width: 366px;
+}
+
+.check-list {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	border-bottom: 1px solid #f9f6f0;
+	padding-bottom: 5px;
+	margin-bottom: 30px; 
+}
+
+.check-list li,
+.radio-list li {
+	width: 183px;
+	height: 55px;
+}
+
+.radio-list {
+	display: inline-flex;
+	flex-flow: row wrap;
+}
+
+.fake-radio {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	border: solid #f1efeb 2px;
+	border-radius: 15px;
+	position: relative;
+	vertical-align: middle; 
+	margin: 0 10px 0 0;
+}
+
+.fake-radio:after {
+	content: '';
+	position: absolute;
+	width: 13px;
+    height: 13px;
+    background: #eca22e; 
+    border-radius: 6px;
+    top: 3px;
+    left: 3px;
+    opacity: 0;
+} 
+
+.contact-form input[type=radio]:checked ~ label .fake-radio {
+	border: solid #eca22e 3px;
+	border-radius: 15px;
+
+}
+
+.contact-form input[type=radio] {
+	position: absolute;
+	left: -9999px;
+}
+
+.contact-form input[type=checkbox]:checked ~ label .fake-check {
+	border-color: #eca22e; 
+}
+
+.contact-form input[type=checkbox]:checked ~ label .fake-check:after,
+.contact-form input[type=radio]:checked ~ label .fake-radio:after {
+	opacity: 1;
+}
+
+.contact-form input[type=checkbox] {
+	position: absolute;
+	left: -9999px;
+}
+
+li {
+	list-style: none;
+}
